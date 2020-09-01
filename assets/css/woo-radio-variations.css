@@ -1,0 +1,30 @@
+.single-product form.variations_form .label {
+    display: none;
+}
+
+.single-product form.variations_form table,
+.single-product form.variations_form tr, 
+.single-product form.variations_form td {
+    padding: 0;
+    border: 0;
+}
+
+.single-product form.cart fieldset.radio__variations {
+
+}
+
+.single-product form.cart .radio__variations--list {
+	list-style: none;
+	margin: 0;
+}
+
+.single-product form.cart .radio__variations--list label {
+	display: initial;
+	padding: .25em 0;
+}
+
+.single-product form.cart .radio__variations--list input {
+	float: left;
+	width: initial;
+	padding: .25em .25em .25em 0;
+}
