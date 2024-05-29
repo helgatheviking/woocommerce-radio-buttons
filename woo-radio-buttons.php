@@ -23,6 +23,9 @@ function wooradio_plugin_path() {
   // gets the absolute path to this plugin directory 
   return untrailingslashit( plugin_dir_path( __FILE__ ) ); 
 } 
+if ( ! defined( 'ABSPATH' ) ) {
+  exit; // Exit if accessed directly.
+}
 
 /**
  * Register scripts
