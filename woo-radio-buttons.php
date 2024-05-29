@@ -1,15 +1,20 @@
 <?php 
 /* 
  * Plugin Name: Woo Radio Buttons 
- * Plugin URI: http://designloud.com/downloads/woo-radio-buttons-3.0.zip 
- * Description: <strong>This is the radio buttons compatible with Woocommerce 4.2+.<br /> 
-<strong>If you find this plugin useful please consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NUSCJBYCS8UL8" target="_blank">making a donation</a>, because well it wasnt easy getting this puppy goin. Thanks and enjoy!</strong> 
- * Author: DesignLoud 
- * Version: 3.0.0 
- * Author URI: http://designloud.com 
- * Tested up to: 5.5.0
- * WC tested up to: 4.4.0
- * WC requires at least: 4.3.0
+ * Plugin URI: https://github.com/helgatheviking/woocommerce-radio-buttons
+ * Description: Convert variable product attributes to radio buttons
+ * Author: helgatheviking, DesignLoud
+ * Version: 4.0.0 
+ * Author URI: http://kathyisawesome.com 
+ * Requires at least: 4.4.0
+ * Tested up to: 6.5.0
+ * 
+ * WC requires at least: 4.2.0
+ * WC tested up to: 9.0.0
+ * 
+ * Requires PHP: 7.2
+ * 
+ * Requires Plugins: woocommerce
  */ 
 
 if ( ! defined( 'ABSPATH' ) ) {
