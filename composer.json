@@ -1,0 +1,7 @@
+{
+  "name": "helgatheviking/woocommerce-radio-buttons",
+  "description": "Convert variable product attributes to radio buttons.",
+  "homepage": "https://github.com/helgatheviking/woocommerce-radio-buttons",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later"
+}
