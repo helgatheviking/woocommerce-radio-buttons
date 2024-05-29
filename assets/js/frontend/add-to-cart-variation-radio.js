@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
             var $form    = $(this).closest( '.variations_form' );
             var useAjax  = false === $form.data( 'product_variations' );
 
-            $form.find( 'input[name="variation_id"], input.variation_id' ).val( '' ).change();
+            $form.find( 'input[name="variation_id"], input.variation_id' ).val( '' ).trigger( 'change' );
             $form.find( '.wc-no-matching-variations' ).remove();
 
             if ( useAjax ) {
@@ -35,16 +35,16 @@ jQuery(document).ready(function($) {
         .on( 'click', '.reset_variations', function( event ) {
 
             event.preventDefault();
- 
+
             $(this).closest('.variations_form').find( '.variations .radio__variations--list' ).each( function() {
-                $(this).find('input:radio').attr( 'checked', false );
+                $(this).find('input:radio').prop( 'checked', false );
 
                 var $first_input = $(this).find( '.radio__variations--item:first-child input:radio' );
 
                 if( '' === $first_input.val() ) {
-                    $first_input.attr( 'checked', true );
+                    $first_input.prop( 'checked', true );
                 }
-                $first_input.change();
+                $first_input.trigger( 'change' );
 
             } );
         } )

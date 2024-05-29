@@ -9,6 +9,5 @@ composer.lock
 .vscode/
 .ds_store
 assets/css/
-assets/js/**/*.min.js
 *.bak
 *.code-workspace
