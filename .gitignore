@@ -7,7 +7,6 @@ package-lock.json
 vendor/
 composer.lock
 .vscode/
-screenshots/
 .ds_store
 assets/css/
 assets/js/**/*.min.js
