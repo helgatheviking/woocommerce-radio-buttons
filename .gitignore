@@ -8,6 +8,5 @@ vendor/
 composer.lock
 .vscode/
 .ds_store
-assets/css/
 *.bak
 *.code-workspace

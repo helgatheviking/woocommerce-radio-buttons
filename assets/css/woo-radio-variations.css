@@ -1,30 +1,45 @@
-.single-product form.variations_form .label {
+.woocommerce .product .variations_form .variations .label {
     display: none;
 }
 
-.single-product form.variations_form table,
-.single-product form.variations_form tr, 
-.single-product form.variations_form td {
+.woocommerce .product .variations_form .variations .value {
+    display: block;
+	width: 100%;
+}
+
+.woocommerce .product .variations_form .variations table,
+.woocommerce .product .variations_form .variations tr, 
+.woocommerce .product .variations_form .variations td {
     padding: 0;
     border: 0;
 }
 
-.single-product form.cart fieldset.radio__variations {
-
-}
-
-.single-product form.cart .radio__variations--list {
+.woocommerce .product .variations_form .variations .radio__variations--list {
 	list-style: none;
 	margin: 0;
+	padding: 0;
 }
 
-.single-product form.cart .radio__variations--list label {
-	display: initial;
-	padding: .25em 0;
+.woocommerce .product .variations_form .variations .radio__variations--list label {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+	cursor: pointer;
 }
 
-.single-product form.cart .radio__variations--list input {
-	float: left;
+.woocommerce .product .variations_form .variations .radio__variations--list input[type="radio"]:checked + label {
+	font-weight: bold;
+}
+
+
+.woocommerce .product .variations_form .variations .radio__variations--list input {
+	cursor: pointer;
 	width: initial;
-	padding: .25em .25em .25em 0;
+	padding: .25em;
+	vertical-align: text-top;
+}
+
+.woocommerce .product .variations_form .variations .radio__variations--list input:focus {
+	outline: none;
 }
