@@ -1,0 +1,31 @@
+{
+  "name": "woocommerce-radio-buttons",
+  "version": "4.0.0",
+  "description": "Convert variable product attributes to radio buttons.",
+  "main": "Gruntfile.js",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helgatheviking/woocommerce-radio-buttons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/helgatheviking/woocommerce-radio-buttons/issues"
+  },
+  "keywords": [
+    "variations",
+    "plugin",
+    "woocommerce"
+  ],
+  "author": "Kathy Darling",
+  "homepage": "https://github.com/helgatheviking/woocommerce-radio-buttons#readme",
+  "devDependencies": {
+    "grunt": "~1.6.1",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "load-grunt-tasks": "~5.1.0"
+  },
+  "scripts": {
+    "release": "grunt release"
+  }
+}
