@@ -1,0 +1,15 @@
+node_modules/
+gitcreds.json
+build/
+deploy/
+.sass-cache/
+package-lock.json
+vendor/
+composer.lock
+.vscode/
+screenshots/
+.ds_store
+assets/css/
+assets/js/**/*.min.js
+*.bak
+*.code-workspace
