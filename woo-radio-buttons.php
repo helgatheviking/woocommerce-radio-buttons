@@ -40,13 +40,24 @@ add_action( 'wp_enqueue_scripts', 'register_woo_radio_button_scripts' );
  * Load scripts on variable product pages.
  *
  * @param array $args Arguments.
- * @since 4.0.0
+ * @since 3.0.0
  */
 function woo_radio_button_enqueue_scripts () {
-  wp_enqueue_script( 'wc-radio-add-to-cart-variation' );  
+  wp_enqueue_script( 'wc-radio-add-to-cart-variation' );
+  add_filter( 'woocommerce_reset_variations_link', '__return_empty_string' );
 } 
 add_action( 'woocommerce_variable_add_to_cart', 'woo_radio_button_enqueue_scripts' ); 
 
+/**
+ * Add reset link after fieldset
+ * 
+ * @since 4.0.0
+ */
+function woo_radio_buttons_add_reset_link() {
+  remove_filter( 'woocommerce_reset_variations_link', '__return_empty_string' );
+  echo wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<p><a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a></p>' ) );
+}
+add_action( 'woocommerce_after_variations_table', 'woo_radio_buttons_add_reset_link', 1 );
 
 if ( ! function_exists( 'wc_dropdown_variation_attribute_options' ) ) {
   /**
