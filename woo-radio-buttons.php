@@ -113,7 +113,7 @@ if ( ! function_exists( 'wc_dropdown_variation_attribute_options' ) ) {
 
       if( $show_option_none ) {      
         $input_id = uniqid( 'attribute_' );
-        $html .= '<li class="radio__variations--item"><label for="' . esc_attr(  $input_id ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_none_radio', $show_option_none_text, $product ) ) .'</label><input id="' . esc_attr(  $input_id ) . '" type="radio" name="' . esc_attr( $name ) . '" value="" ' . checked( sanitize_title( $args['selected'] ), '', false ) . '/></li>'; 
+        $html .= '<li class="radio__variations--item"><input id="' . esc_attr(  $input_id ) . '" type="radio" name="' . esc_attr( $name ) . '" value="" ' . checked( sanitize_title( $args['selected'] ), '', false ) . '/><label for="' . esc_attr(  $input_id ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_none_radio', $show_option_none_text, $product ) ) .'</label></li>'; 
       }
 
       if ( $product && taxonomy_exists( $attribute ) ) {
@@ -129,14 +129,14 @@ if ( ! function_exists( 'wc_dropdown_variation_attribute_options' ) ) {
         foreach ( $terms as $term ) {
           if ( in_array( $term->slug, $options, true ) ) {
             $input_id = uniqid( 'attribute_' );
-            $html .= '<li class="radio__variations--item"><label for="' . esc_attr(  $input_id ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_name', $term->name, $term, $attribute, $product ) ) .'</label><input id="' . esc_attr(  $input_id ) . '" type="radio" name="' . esc_attr( $name ) . '" value="' . esc_attr( $term->slug ) . '" ' . checked( sanitize_title( $args['selected'] ), $term->slug, false ) . '/></li>';
+            $html .= '<li class="radio__variations--item"><input id="' . esc_attr(  $input_id ) . '" type="radio" name="' . esc_attr( $name ) . '" value="' . esc_attr( $term->slug ) . '" ' . checked( sanitize_title( $args['selected'] ), $term->slug, false ) . '/><label for="' . esc_attr(  $input_id ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_name', $term->name, $term, $attribute, $product ) ) .'</label></li>';
           }
         }
       } else {
         foreach ( $options as $option ) {
           $input_id = uniqid( 'attribute_' );
           $selected = checked( $args['selected'], sanitize_title( $option ), false );
-          $html    .= '<li class="radio__variations--item"><label for="' . esc_attr(  $input_id ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option, null, $attribute, $product ) ) .'</label><input id="' . esc_attr(  $input_id ) . '" type="radio" name="' . esc_attr( $name ) . '" value="' . esc_attr( $option ) . '" ' . $selected . '></li>';
+          $html    .= '<li class="radio__variations--item"><input id="' . esc_attr(  $input_id ) . '" type="radio" name="' . esc_attr( $name ) . '" value="' . esc_attr( $option ) . '" ' . $selected . '><label for="' . esc_attr(  $input_id ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option, null, $attribute, $product ) ) .'</label></li>';
         }
       }
     }
