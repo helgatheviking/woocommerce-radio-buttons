@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/helgatheviking/woocommerce-radio-buttons
  * Description: Convert variable product attributes to radio buttons
  * Author: helgatheviking, DesignLoud
- * Version: 4.0.0 
+ * Version: 4.1.0 
  * Author URI: http://kathyisawesome.com 
  * Requires at least: 6.3.0
  * Tested up to: 6.6.0
@@ -49,8 +49,8 @@ add_action( 'before_woocommerce_init', function() {
  * @since 2.4.0
  */
 function register_woo_radio_button_scripts () { 
-	 wp_register_script( 'wc-radio-add-to-cart-variation', plugins_url( 'assets/js/frontend/add-to-cart-variation-radio.js', __FILE__ ), array( 'jquery', 'wc-add-to-cart-variation' ), '4.0.0', true );
-   wp_enqueue_style( 'wc-radio-button-styles', plugins_url( 'assets/css/woo-radio-variations.css', __FILE__ ), array(), '4.0.0', 'all' );
+	 wp_register_script( 'wc-radio-add-to-cart-variation', plugins_url( 'assets/js/frontend/add-to-cart-variation-radio.js', __FILE__ ), array( 'jquery', 'wc-add-to-cart-variation' ), '4.1.0', true );
+   wp_enqueue_style( 'wc-radio-button-styles', plugins_url( 'assets/css/woo-radio-variations.css', __FILE__ ), array(), '4.1.0', 'all' );
 } 
 add_action( 'wp_enqueue_scripts', 'register_woo_radio_button_scripts' ); 
 

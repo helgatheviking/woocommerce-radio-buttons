@@ -1,6 +1,6 @@
 {
   "name": "woocommerce-radio-buttons",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Convert variable product attributes to radio buttons.",
   "main": "Gruntfile.js",
   "license": "GPL-3.0-or-later",
