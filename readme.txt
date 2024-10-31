@@ -2,9 +2,9 @@
 Contributors: helgatheviking, DesignLoud
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NUSCJBYCS8UL8
 Tags: woocommerce
-Requires at least: 5.0
-Tested up to: 6.5
 Stable tag: 4.0.0
+Requires at least: 6.3.0
+Tested up to: 6.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -26,6 +26,9 @@ This is typically caused by a theme or plugin conflicting.  Try activating the d
 
 == Changelog ==
 
+= 4.1.0 - 2024-10-31 =
+* Require Woocommerce 9.0.0
+* Require WordPress 6.3.0
 = 4.0.0 = 
 * 2024-05-29
 * Update script for modern jQuery.

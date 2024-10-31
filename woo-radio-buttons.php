@@ -6,11 +6,11 @@
  * Author: helgatheviking, DesignLoud
  * Version: 4.0.0 
  * Author URI: http://kathyisawesome.com 
- * Requires at least: 4.4.0
- * Tested up to: 6.5.0
+ * Requires at least: 6.3.0
+ * Tested up to: 6.6.0
  * 
- * WC requires at least: 4.2.0
- * WC tested up to: 9.0.0
+ * WC requires at least: 9.0.0
+ * WC tested up to: 9.3.0
  * 
  * Requires PHP: 7.2
  * 
