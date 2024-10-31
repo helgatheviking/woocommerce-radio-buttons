@@ -22,6 +22,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Declare Features Compatibility
+ * 
+ * @since 2.4.1
+ */
+add_action( 'before_woocommerce_init', function() {
+  if ( ! class_exists( 'Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+    return;
+  }
+
+  // HPOS (Custom Order tables) compatibility.
+  \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', plugin_basename( __FILE__ ), true );
+
+  // Cart/Checkout Blocks compatibility.
+  \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'cart_checkout_blocks', plugin_basename( __FILE__ ), true );
+
+  // Remote Logging compatibility.
+  \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'remote_logging', plugin_basename( __FILE__ ), true );
+
+} );
+
+/**
  * Register scripts
  *
  * @param array $args Arguments.
